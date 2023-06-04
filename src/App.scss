@@ -1,0 +1,206 @@
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  @media screen and (max-width: 1023px) {
+    align-items: flex-start;
+  }
+
+  .containerCard {
+    display: flex;
+    height: max-content;
+    margin-right: 450px;
+    position: relative;
+
+    @media screen and (max-width: 1023px) {
+      align-items: center;
+      justify-content: center;
+      margin-right: 0px;
+      flex-direction: column;
+      position: static;
+    }
+
+    .containerCardLeft {
+      align-items: center;
+      background: rgb(46, 43, 233);
+      background: linear-gradient(0deg, rgba(46, 43, 233, 1) 11%, rgba(120, 87, 255, 1) 90%);
+      border-radius: 29px;
+      display: flex;
+      flex-direction: column;
+      padding: 41px 60px;
+      height: 100%;
+      z-index: 2;
+
+      @media screen and (max-width: 1023px) {
+        border-radius: 0px 0px 29px 29px;
+      }
+
+      .title {
+        color: hsl(224, 30%, 85%);
+        margin-bottom: 30px;
+      }
+
+      .containerCircle {
+        align-items: center;
+        background: linear-gradient(0deg, hsla(241, 72%, 46%, 0) 0%, rgba(8, 6, 13, 0.320) 100%);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+        gap: 14px;
+        padding: 50px 65px;
+
+        .number {
+          color: hsl(221, 100%, 96%);
+          font-size: 70px;
+          line-height: 59px;
+        }
+
+        span {
+          color: hsla(222, 6%, 65%, 0.532);
+          font-size: 17px;
+          font-weight: 700;
+        }
+      }
+
+      .rating {
+        color: hsl(0, 0%, 100%);
+        margin-top: 28px;
+      }
+
+      .description {
+        color: hsl(223, 22%, 84%);
+        font-size: 17px;
+        margin-top: 18px;
+        max-width: 250px;
+        text-align: center;
+
+        @media screen and (max-width: 1023px) {
+          max-width: 272px;
+        }
+      }
+    }
+
+    .containerCardRight {
+      box-shadow: 10px 10px 5px 0px rgba(224, 224, 224, 1);
+      border-radius: 29px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      left: 320px;
+      padding: 41px 40px 41px 90px;
+      position: absolute;
+      z-index: 1;
+      width: 400px;
+
+      @media screen and (max-width: 1023px) {
+        border-radius: 0px;
+        box-shadow: none;
+        position: static;
+        padding: 17px 30px 41px 30px;
+        width: 380px;
+      }
+
+      .title {
+        color: hsl(224, 30%, 27%);
+        margin-bottom: 17px;
+
+        @media screen and (max-width: 1023px) {
+          font-size: 19px;
+        }
+      }
+
+      .CardRightContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .row {
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          padding: 13px;
+          width: 100%;
+
+          .textImage {
+            display: flex;
+            gap: 10px;
+          }
+
+          .score {
+            display: flex;
+            gap: 5px;
+
+            .pontuation {
+              color: hsl(224, 30%, 27%);
+              font-weight: 700;
+              margin-right: 3px;
+            }
+
+            .bar,
+            .total {
+              color: hsla(218, 6%, 65%, 0.888);
+              font-weight: 700;
+            }
+          }
+        }
+
+
+
+        .row:nth-child(1) {
+          background-color: hsla(0, 100%, 67%, 0.091);
+          color: hsl(0, 100%, 67%);
+          display: flex;
+        }
+
+        .row:nth-child(2) {
+          background-color: hsla(39, 100%, 56%, 0.091);
+          color: hsl(39, 100%, 56%);
+          display: flex;
+        }
+
+        .row:nth-child(3) {
+          background-color: hsla(166, 100%, 37%, 0.091);
+          color: hsl(166, 100%, 37%);
+          display: flex;
+        }
+
+        .row:nth-child(4) {
+          background-color: hsla(234, 85%, 45%, 0.061);
+          color: hsl(234, 85%, 45%);
+          display: flex;
+        }
+      }
+
+      .containerButton {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        @media screen and (max-width: 1023px) {
+          margin-top: 22px;
+        }
+
+        button {
+          background: hsl(224, 30%, 27%);
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          color: #FFF;
+          font-size: 15px;
+          justify-self: flex-end;
+          padding: 15px 0;
+          transition: color 2s;
+
+          &:hover {
+            background: rgb(46, 43, 233);
+            background: linear-gradient(0deg, rgba(46, 43, 233, 1) 11%, rgba(120, 87, 255, 1) 90%);
+          }
+        }
+      }
+    }
+  }
+}
